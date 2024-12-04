@@ -1,0 +1,17 @@
+Client-----(Requests Page)----->Controller(Servlet receives request)------>Service class(methods to call DAO)------>DAO(processes data)
+	^									|
+	|									|
+	|									|
+	|									|
+	|									|
+	|								Model Object(POJO)
+	|									|
+	|									|
+	|									v
+    |--------------------------------View (JSP)
+    
+
+    Before client request reaches the servlet controller, 
+    one can configure filters to intercept the request 
+    and perform checks such as some security check, maintaining log etc.
+    Multiple individual filters can be chained which is configured in the web.xml file.

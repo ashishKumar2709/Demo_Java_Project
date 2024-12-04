@@ -1,0 +1,47 @@
+JSP (JavaServer Pages) is a technology used to create dynamic web content using Java. 
+It allows developers to embed Java code into HTML pages, enabling the creation of server-side web applications. 
+Jsp gives implicit objects ie when it run the .jsp file is converted to servlet
+And all the objects required by the code ie request, out is created inside a service method of servlet class. 
+
+JSP has four types of tags
+
+1.JSP Directives: <%@page import =<package1>,<package2>...%> this for importing the packages
+2.Scripting Elements:
+	a) Declarations: To declare variables in the servlet class but before the service method eg: <%! int count = 0; %>
+	b) Scriptlets: Which gets executed when the page is called. eg: <% count++; %>
+	c) Expressions: For output expressions. eg: <%= count %> (same as out.println(count))
+	
+There are three main types of JDBC directives:
+1.Page directive: Defines content type, importing java classes, session behavior etc
+	<%@ page attribute="value" %>
+	common attributes defined here are:
+	-language: Specifies the scripting language. Default is "java".
+	-contentType: Defines the MIME type of the page (e.g., "text/html; charset=UTF-8").
+	-import: Allows you to import Java classes.
+	-session: Specifies whether the page participates in an HTTP session (default is true).
+	-errorPage: Defines a JSP page to redirect to when an error occurs.
+	-isErrorPage: Specifies whether the current page is an error page (true or false).
+	
+2.Include directive: Includes content from another file.
+	e.g. including header and footer file:
+		<%@ include file="header.jsp" %>
+		<html>
+		<head>
+		    <title>Include Directive Example</title>
+		</head>
+		<body>
+		    <h1>Welcome to my website!</h1>
+		    <p>This content comes from the main JSP page.</p>
+		    
+		    <%@ include file="footer.jsp" %>
+		</body>
+		</html>
+		
+3.Taglib directive: Declares tag library which is a collection of custom tags used in jsp pages.
+	e.g.: <%@ taglib uri="uri" prefix="prefix" %>
+
+	
+	//exception object is only available if isErrorPage tag is true for the page
+	
+	
+    JSTL: JSP Standard Tag Library

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+<context-param>
+	<param-name>name</param-name>
+	<param-value>User One</param-value>
+</context-param>
+<servlet>
+<servlet-name>Greet</servlet-name>
+<servlet-class>com.ak09.Greet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Greet</servlet-name>
+<url-pattern>/home</url-pattern>
+</servlet-mapping>
+ <servlet>
+ <servlet-name>Add_nums</servlet-name>
+ <servlet-class>com.ak09.Add_servlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Add_nums</servlet-name>
+ <url-pattern>/add</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+ <servlet-name>Square_added_op</servlet-name>
+ <servlet-class>com.ak09.SquareServlet</servlet-class>
+ <init-param>
+ 	<param-name>description</param-name>
+ 	<param-value>Square Of Sum: </param-value>
+ </init-param>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Square_added_op</servlet-name>
+ <url-pattern>/square</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+ <servlet-name>Divide_nums</servlet-name>
+ <servlet-class>com.ak09.DivideServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Divide_nums</servlet-name>
+ <url-pattern>/divide</url-pattern>
+ </servlet-mapping>
+ 
+   <servlet>
+ <servlet-name>Divide_minus_one</servlet-name>
+ <servlet-class>com.ak09.Minus_One</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Divide_minus_one</servlet-name>
+ <url-pattern>/minusone</url-pattern>
+ </servlet-mapping>
+ 
+   <servlet>
+ <servlet-name>Subs_nums</servlet-name>
+ <servlet-class>com.ak09.SubstractServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Subs_nums</servlet-name>
+ <url-pattern>/substract</url-pattern>
+ </servlet-mapping>
+ 
+   <servlet>
+ <servlet-name>Cube</servlet-name>
+ <servlet-class>com.ak09.CubeServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>Cube</servlet-name>
+ <url-pattern>/cube</url-pattern>
+ </servlet-mapping>
+ 
+</web-app>
